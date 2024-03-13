@@ -1,0 +1,21 @@
+# Repository Name - hello-world-repo
+# Work on the following branch - main
+# Workflow File Name - hello-world.yml
+# Workflow Name - Hello World
+# Trigger Workflow on push events
+# Workflow should have a Job named - hello-job
+# a. Run Job on - ubuntu-latest runner
+# b. Job has 1 step named - Echo text
+# c. Run a command - echo "Hello, world!"
+
+name: Hello World
+
+on:
+  push:
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo text
+        run: echo "Hello, world!"
